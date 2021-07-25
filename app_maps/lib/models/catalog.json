@@ -1,0 +1,35 @@
+{
+    "restaurants" : [
+        {
+            "id" : 1,
+            "name" : "The Chef King",
+            "rating" : 5,
+            "comment" : "One of the best Hotel in the town",
+            "image_url" : "https://www.elitetraveler.com/wp-content/uploads/2017/10/Hotel-Eden-La-Terrazza-scaled-e1600071873644.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "The Palace",
+            "rating" : 4,
+            "comment" : "One of the best Hotel in the town",
+            "image_url" : "https://www.romeing.it/wp-content/uploads/2016/02/imago-restaurant-rome.jpg"
+        },
+        {
+            "id" : 3,
+            "name" : "Italian Euro Biryani",
+            "rating" : 4,
+            "comment" : "One of the best Hotel in the town",
+            "image_url" : "https://media-cdn.tripadvisor.com/media/photo-s/0e/e3/11/93/imago-s-view-the-hassler.jpg"
+        },
+        {
+            "id" : 3,
+            "name" : "Queens Restauraunt",
+            "rating" : 4.9,
+            "comment" : "One of the best Hotel in the town",
+            "image_url" : "https://www.elitetraveler.com/wp-content/uploads/2017/10/Imago-scaled.jpg"
+        }
+
+    ]
+
+    
+}
