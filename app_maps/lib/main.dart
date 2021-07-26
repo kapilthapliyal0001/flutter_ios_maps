@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
           fontFamily: GoogleFonts.lato().fontFamily
           // primaryTextTheme: GoogleFonts.latoTextTheme(),
           ),
-      initialRoute: MyRoutes.homeRuote,
+      initialRoute: MyRoutes.loginRoute,
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => LoginPage(),
-        MyRoutes.homeRuote: (context) => HomePage(),
-        MyRoutes.loginRuote: (context) => LoginPage()
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }

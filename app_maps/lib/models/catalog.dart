@@ -1,5 +1,5 @@
 class CatalogModal {
-  static final products = [
+  static List<Item> items = [
     Item(
         id: 1,
         name: "The Chef King",
@@ -24,4 +24,19 @@ class Item {
     required this.image_url,
     required this.comment,
   });
+
+  factory Item.fromMap(Map<String, dynamic> map) => Item(
+      id: map["id"],
+      name: map["name"],
+      rating: map["rating"],
+      image_url: map["image_url"],
+      comment: map["comment"]);
+
+  // toMap() => {
+  //   "id" = id,
+  //   "name" = name,
+  //   "rating" = rating,
+  //   "image_url" = image_url,
+  //   "comment" = comment
+  // };
 }

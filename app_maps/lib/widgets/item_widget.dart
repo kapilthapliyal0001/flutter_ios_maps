@@ -34,6 +34,7 @@ class ItemWidget extends StatelessWidget {
           style: TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 20,
+            color: item.rating > 4 ? Colors.green : Colors.red,
           ),
         ),
       ),
