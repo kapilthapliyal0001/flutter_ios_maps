@@ -1,3 +1,4 @@
+import 'package:app_maps/screens/google_maps.dart';
 import 'package:app_maps/screens/home_page.dart';
 import 'package:app_maps/screens/login_page.dart';
 import 'package:app_maps/utils/routes.dart';
@@ -26,7 +27,8 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.homeRoute: (context) => HomePage(),
-        MyRoutes.loginRoute: (context) => LoginPage()
+        MyRoutes.loginRoute: (context) => LoginPage(),
+        MyRoutes.googleMaps: (context) => GoogleMaps()
       },
     );
   }

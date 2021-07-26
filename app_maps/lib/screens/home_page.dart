@@ -57,9 +57,12 @@ class _HomePageState extends State<HomePage> {
 
             // itemCount: dummyList.length,
             itemBuilder: (context, index) {
-              return ItemWidget(
-                item: CatalogModal.items[index],
-                // item: dummyList[index],
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: ItemWidget(
+                  item: CatalogModal.items[index],
+                  // item: dummyList[index],
+                ),
               );
             },
           ),

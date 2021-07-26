@@ -9,6 +9,7 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   String name = "";
   bool changeButton = false;
+  bool mapButton = false;
   final _formKey = GlobalKey<FormState>();
 
   moveToHome(BuildContext context) async {
@@ -20,6 +21,19 @@ class _LoginPageState extends State<LoginPage> {
       Navigator.pushNamed(context, MyRoutes.homeRoute);
       setState(() {
         changeButton = false;
+      });
+    }
+  }
+
+  moveToMaps(BuildContext context) async {
+    if (_formKey.currentState!.validate()) {
+      setState(() {
+        mapButton = true;
+      });
+      await Future.delayed(Duration(seconds: 1));
+      Navigator.pushNamed(context, MyRoutes.googleMaps);
+      setState(() {
+        mapButton = false;
       });
     }
   }
@@ -121,7 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                                   ),
                                 ),
                         ),
-                      )
+                      ),
                       // ElevatedButton(
                       //     child: Text("Login"),
                       //     onPressed: () {
@@ -135,6 +149,41 @@ class _LoginPageState extends State<LoginPage> {
                       //     },
                       //     style:
                       //         TextButton.styleFrom(minimumSize: Size(150, 40))),
+                      SizedBox(
+                        height: 30.0,
+                      ),
+                      InkWell(
+                        onTap: () => moveToMaps(context),
+                        child: AnimatedContainer(
+                          duration: Duration(seconds: 1),
+                          height: 50,
+                          width: mapButton ? 50 : 250,
+                          // color: Colors.deepPurple,
+                          alignment: Alignment.center,
+                          decoration: BoxDecoration(
+                            shape: mapButton
+                                ? BoxShape.circle
+                                : BoxShape.rectangle,
+                            color: Colors.greenAccent,
+                            // borderRadius: changeButton
+                            //     ? BorderRadius.circular(20.0)
+                            //     : BorderRadius.circular(8.0),
+                          ),
+                          child: mapButton
+                              ? Icon(
+                                  Icons.maps_home_work,
+                                  color: Colors.white,
+                                )
+                              : Text(
+                                  "Locate on Map",
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                        ),
+                      ),
                     ],
                   ),
                 )
