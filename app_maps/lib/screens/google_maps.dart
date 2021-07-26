@@ -1,3 +1,4 @@
+import 'package:app_maps/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -86,6 +87,10 @@ class _GoogleMapsState extends State<GoogleMaps> {
           zoom: 15,
         ),
         markers: markers.map((e) => e).toSet(),
+        myLocationButtonEnabled: true,
+        onTap: (argument) {
+          Navigator.pushNamed(context, MyRoutes.homeRoute);
+        },
       ),
     );
   }

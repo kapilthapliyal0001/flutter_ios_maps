@@ -1,5 +1,5 @@
-import 'package:app_maps/utils/routes.dart';
-import 'package:flutter/material.dart';
+import 'package:app_maps/utils/routes.dart'; // Routes file;
+import 'package:flutter/material.dart'; // necessary package;
 
 class LoginPage extends StatefulWidget {
   @override
@@ -7,13 +7,16 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  String name = "";
-  bool changeButton = false;
-  bool mapButton = false;
-  final _formKey = GlobalKey<FormState>();
+  String name = ""; // Experimental Welcome Text;
+  bool changeButton = false; // Dynamic Login Button;
+  bool mapButton = false; // Dynamic Google Maps Route Button
+  final _formKey = GlobalKey<FormState>(); //Represents the Login Form
 
   moveToHome(BuildContext context) async {
+    // async function to delay navigation with animation;
+    // method to navigate to #Home;
     if (_formKey.currentState!.validate()) {
+      // if form validated;
       setState(() {
         changeButton = true;
       });
@@ -26,6 +29,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   moveToMaps(BuildContext context) async {
+    // method to navigate to #GoogleMaps;
     if (_formKey.currentState!.validate()) {
       setState(() {
         mapButton = true;
@@ -44,13 +48,14 @@ class _LoginPageState extends State<LoginPage> {
         color: Colors.white,
         child: SingleChildScrollView(
           child: Form(
+            // use it for forms and validation;
             key: _formKey, // key to access the form
             child: Column(
               children: [
                 Image.asset(
                   "assets/images/login_img.png",
                   fit: BoxFit.cover,
-                ),
+                ), // SizeBox needed for some space;
                 SizedBox(
                   height: 20.0,
                   // child: Text("ijnsdcijen"),
@@ -105,6 +110,7 @@ class _LoginPageState extends State<LoginPage> {
                         height: 20.0,
                       ),
                       InkWell(
+                        // Inkwell preferred for Animations onTab feature;
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
                           duration: Duration(seconds: 1),
