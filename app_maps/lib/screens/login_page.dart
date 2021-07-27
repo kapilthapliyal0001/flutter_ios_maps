@@ -1,5 +1,6 @@
-import 'package:app_maps/utils/routes.dart'; // Routes file;
+import 'package:soqua/utils/routes.dart'; // Routes file;
 import 'package:flutter/material.dart'; // necessary package;
+// app_maps/mobile_app/lib/utils/routes.dart
 
 class LoginPage extends StatefulWidget {
   @override

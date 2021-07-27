@@ -1,6 +1,6 @@
-import 'package:app_maps/models/catalog.dart';
-import 'package:app_maps/widgets/drawer.dart';
-import 'package:app_maps/widgets/item_widget.dart';
+import 'package:soqua/models/catalog.dart';
+import 'package:soqua/widgets/drawer.dart';
+import 'package:soqua/widgets/item_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';

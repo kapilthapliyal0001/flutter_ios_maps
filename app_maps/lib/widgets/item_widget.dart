@@ -1,4 +1,4 @@
-import 'package:app_maps/models/catalog.dart';
+import 'package:soqua/models/catalog.dart';
 import 'package:flutter/material.dart';
 
 class ItemWidget extends StatelessWidget {

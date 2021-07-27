@@ -1,7 +1,7 @@
-import 'package:app_maps/screens/google_maps.dart';
-import 'package:app_maps/screens/home_page.dart';
-import 'package:app_maps/screens/login_page.dart';
-import 'package:app_maps/utils/routes.dart';
+import 'package:soqua/screens/google_maps.dart';
+import 'package:soqua/screens/home_page.dart';
+import 'package:soqua/screens/login_page.dart';
+import 'package:soqua/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
